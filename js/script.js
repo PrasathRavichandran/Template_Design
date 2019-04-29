@@ -1,7 +1,8 @@
 console.log("App started");
 $(function () {
     $('.news__card_grid').flickity({
-        groupCells: true
+        groupCells: true,
+        imagesLoaded: true
     });
 
     $('.image__gallery_grid').flickity({
@@ -9,12 +10,14 @@ $(function () {
         contain: true,
         prevNextButtons: true,
         selectedAttraction: 0.3,
-        friction: 0.8
+        friction: 0.8,
+        imagesLoaded: true
     });
 
     $('.institute__inner_grid').flickity({
         cellAlign: 'left',
-        contain: true
+        contain: true,
+        imagesLoaded: true
     })
 
     $('.theme__block_item').click(function () {
@@ -36,4 +39,24 @@ $(function () {
             $('.header').removeClass('active');
         }
     })
+
+    $('ul.navbar-nav li.dropdown').hover(function () {
+        $(this).find('.dropdown-menu').stop(true, true).fadeIn(200);
+    }, function () {
+        $(this).find('.dropdown-menu').stop(true, true).fadeOut(200);
+    });
+
+    $(".menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
+        $(this).toggleClass("active");
+    });
+
+    // Closes responsive menu when a scroll trigger link is clicked
+    $('#sidebar-wrapper .js-scroll-trigger').click(function () {
+        $("#sidebar-wrapper").removeClass("active");
+        $(".menu-toggle").removeClass("active");
+        $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
+    });
 });
