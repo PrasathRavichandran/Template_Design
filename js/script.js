@@ -1,5 +1,5 @@
-console.log("App started");
 $(function () {
+    console.log("App started");
     $('.news__card_grid').flickity({
         groupCells: true,
         imagesLoaded: true
@@ -28,6 +28,8 @@ $(function () {
         $(`.${id}`).addClass('is-content-active');
     })
 
+
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 150) {
             $('.header').addClass('active');
@@ -54,9 +56,9 @@ $(function () {
     });
 
     // Closes responsive menu when a scroll trigger link is clicked
-    $('#sidebar-wrapper .js-scroll-trigger').click(function () {
-        $("#sidebar-wrapper").removeClass("active");
-        $(".menu-toggle").removeClass("active");
-        $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
-    });
+    // $('#sidebar-wrapper .js-scroll-trigger').click(function () {
+    //     $("#sidebar-wrapper").removeClass("active");
+    //     $(".menu-toggle").removeClass("active");
+    //     $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
+    // });
 });

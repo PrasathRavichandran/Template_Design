@@ -87,7 +87,7 @@ body {
     align-items: center;
     padding: 0 24px 0 15px;
     overflow: hidden;
-    z-index: 6;
+    z-index: 99;
     transition: all .3s ease;
 }
 
@@ -97,11 +97,13 @@ body {
         width: 328px;
         height: 123px;
         padding: 0 61px 0 35px;
+        z-index: 99;
     }
     .main_logo.active {
         width: 197px;
         height: 74px;
         padding: 0 40px 0 25px;
+        z-index: 99;
     }
 }
 
@@ -259,6 +261,7 @@ body {
     width: 250px;
     -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
+    z-index: 99;
 }
 
 .menu-toggle {
@@ -1600,6 +1603,297 @@ body {
     }
     .media__highlights .col-12 {
         text-align: left;
+    }
+}
+
+/* Breadcrump */
+
+#banner {
+    position: relative;
+}
+
+#banner .img {
+    height: 80vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#banner .img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.breadcrumb {
+    background: transparent;
+    z-index: 3;
+    position: absolute;
+    bottom: 100px;
+}
+
+.breadcrumb li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.breadcrumb li.active {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.banner {
+    padding-top: 15rem;
+}
+
+/* Gallery_slider */
+
+.gallery__slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery__slider_background::before {
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    z-index: 1;
+}
+
+.gallery__slider_container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 21px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.gallery__slider_heading {
+    font-size: 1.5625rem;
+    line-height: 1.1;
+    color: #fff;
+    font-weight: 500;
+}
+
+.gallery__slider_content ul {
+    list-style: none;
+}
+
+.gallery__slider_content li {
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    padding-left: 15px;
+}
+
+.gallery__slider_content li:first-child {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.gallery__slider_content a {
+    font-size: .6875rem;
+    line-height: 2.18182;
+    letter-spacing: .13636em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.gallery__slider_content {
+    padding-bottom: 25px;
+}
+
+@media(min-width:1200px) {
+    .gallery__slider_container {
+        padding: 0 142.5px;
+    }
+    .gallery__slider_content {
+        padding: 60px 60px 60px 104px;
+    }
+    .gallery__slider_heading {
+        font-size: 4.25rem;
+        line-height: 1.1;
+    }
+    .gallery__slider_content a {
+        font-size: .875rem;
+        line-height: 1.71429;
+        letter-spacing: .10714em;
+    }
+}
+
+.gallery__slider_next {
+    padding-top: 20px;
+    padding: 45px 0;
+}
+
+.gallery__slider_inner_grid_single_img img {
+    width: 843px;
+    height: 580px;
+}
+
+.gallery__slider_wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.gallery__slider_inner_grid_single_img_content {
+    width: 350px !important;
+    min-height: 300px;
+    background: #000;
+    padding: 40px;
+}
+
+.gallery__slider_inner_grid_single_img_content p {
+    font-size: .875rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.gallery__slider_carousel_order {
+    color: #C4D600 !important;
+    font-size: .875rem;
+    line-height: 1.28571;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.gallery__slider_inner_grid_single_img_content {
+    position: relative;
+}
+
+.gallery__slider_carousel_order {
+    position: absolute;
+    bottom: 20px;
+}
+
+.img-mob {
+    display: block;
+}
+
+@media(min-width:1200px) {
+    .gallery__slider_next {
+        padding-top: 80px;
+    }
+    .gallery__slider_wrapper {
+        padding: 0 142.5px;
+    }
+    .gallery__slider_inner_grid_single_img_content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 7px;
+        color: #fff;
+    }
+    .gallery__slider_inner_grid_single_img_content {
+        position: relative;
+    }
+    .gallery__slider_carousel_order {
+        position: absolute;
+        bottom: 20px;
+    }
+    .gallery__slider_inner_img_grid {
+        position: relative;
+    }
+    .gallery__slider_inner_img_grid_content {
+        position: absolute;
+        right: 20px;
+        margin-top: 35px;
+    }
+    .img-mob {
+        display: none;
+    }
+    .gallery__slider_inner_grid_single_img_content {
+        width: 350px !important;
+        min-height: 500px;
+        background: #000;
+        padding: 20px;
+        padding-top: 40px;
+        padding-left: 40px;
+    }
+}
+
+/* Take tour */
+
+.take__tour {
+    padding: 25px 0;
+    position: relative;
+}
+
+.take__tour_wrapper {
+    background-image: url('../img/health-tech-hero.jpg');
+    background-size: cover;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+}
+
+.take__tour_wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 40, 48, .52);
+}
+
+.take__tour_content {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 35px 75px;
+}
+
+.related_stories .news__card {
+    background: none;
+}
+
+.related_stories .flickity-button {
+    border: 2px solid #000;
+}
+
+.related_stories .flickity-prev-next-button .flickity-button-icon {
+    color: #000;
+}
+
+@media(min-width:1200px) {
+    .take__tour {
+        padding: 45px 0;
+    }
+    .take__tour_wrapper::after {
+        background-color: rgba(0, 0, 0, .47);
+    }
+    .take__tour_content {
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 88px 70px 80px;
     }
 }
 
