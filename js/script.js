@@ -55,6 +55,10 @@ $(function () {
         $(this).toggleClass("active");
     });
 
+    $('.sidebar-nav-item').click(function () {
+        $(this).find('i').toggleClass('active');
+    })
+
     // Closes responsive menu when a scroll trigger link is clicked
     // $('#sidebar-wrapper .js-scroll-trigger').click(function () {
     //     $("#sidebar-wrapper").removeClass("active");
