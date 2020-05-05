@@ -1,7 +1,7 @@
 ## Template_Design
 This project is a design based one. I used standard HTML, CSS, JAVASCRIPT to design this beautiful template and this design is inspired from the website [Cornell Tech](https://tech.cornell.edu/)
-## Visit webpage
-This project is deployed in github. Please visit (https://prasathravichandran.github.io/Template_Design/) to preview the webpage design.
+## Live Demo
+This project is deployed in github. Please visit (https://prasathravichandran.github.io/Template_Design/) or click [LIVE DEMO](https://prasathravichandran.github.io/Template_Design/) to preview the webpage design.
 ## Platform
 This template is developed using HTML5, CSS3, [Bootstrap(4.3.1)](https://getbootstrap.com/docs/4.3/getting-started/introduction/) and I used JavaScript libraries like [Flickity](https://flickity.metafizzy.co/), [Slick slider](https://kenwheeler.github.io/slick/). For IDE, I used [VScode](https://code.visualstudio.com/).
 ## Development Server
